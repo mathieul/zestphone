@@ -8,14 +8,9 @@ gem 'twilio-ruby'
 gem 'jbuilder'
 gem 'state_machine'
 gem 'american_date'
-gem 'kaminari'
 gem 'haml'
-gem 'sass'
-gem 'pusher'
-gem 'ejs'
 
 group :development do
-  gem 'rack-proxy', :require => false
   gem 'debugger'
 end
 
@@ -29,7 +24,7 @@ group :development, :test do
   gem 'vcr'
   gem 'webmock'
   gem 'factory_girl_rails'
-  gem 'pry-rails'
+  gem 'jazz_hands'
   gem 'ruby-graphviz'
   gem 'thin'
   gem 'awesome_print'

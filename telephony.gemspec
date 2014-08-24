@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 3.0"
+  s.add_dependency "rails", "~> 4.1"
   s.add_dependency "state_machine"
   s.add_dependency "kaminari"
-  s.add_dependency "pusher", "0.11.3"
+  s.add_dependency "pusher"
   s.add_dependency "ejs"
   s.add_dependency "sass"
 end
