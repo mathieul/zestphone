@@ -15,9 +15,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'cucumber'
   gem 'capybara'
-  gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'wopr', git: "git://github.com/ZestFinance/wopr.git", tag: '0.2.0'
   gem 'rspec-rails'
@@ -37,4 +35,6 @@ end
 group :test do
   gem 'nokogiri'
   gem 'timecop'
+  gem 'cucumber'
+  gem 'cucumber-rails', require: false
 end
