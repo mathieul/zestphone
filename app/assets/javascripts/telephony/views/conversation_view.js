@@ -11,7 +11,8 @@ Zest.Telephony.Views.ConversationView = Backbone.View.extend({
 
   template: JST["templates/telephony/conversation_view"],
 
-  initialize: function() {
+  initialize: function(options) {
+    this.options = options;
     this.setupNewConversation();
 
     $(document)

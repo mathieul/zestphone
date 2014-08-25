@@ -1,6 +1,10 @@
 Zest.Telephony.Views.WidgetView = Backbone.View.extend({
   className: 'telephony-widget-container',
 
+  initialize: function (options) {
+    this.options = options;
+  },
+
   disableCallControl: function(opts) {
     this.conversationView.disableCallControl(opts);
   },
