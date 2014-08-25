@@ -30,17 +30,17 @@ module Telephony
 
     has_many :calls
 
-    attr_accessible :csr_id,
-      :status,
-      :generate_caller_id,
-      :name,
-      :phone_ext,
-      :phone_number,
-      :phone_type,
-      :csr_type,
-      :sip_number,
-      :call_center_name,
-      :transferable_agents
+    # attr_accessible :csr_id,
+    #   :status,
+    #   :generate_caller_id,
+    #   :name,
+    #   :phone_ext,
+    #   :phone_number,
+    #   :phone_type,
+    #   :csr_type,
+    #   :sip_number,
+    #   :call_center_name,
+    #   :transferable_agents
 
     serialize :transferable_agents, Array
 
@@ -70,7 +70,7 @@ module Telephony
     end
 
     def self.update_or_create_by_widget_data data
-      agent = find_or_create_by_csr_id data[:csr_id]
+      agent = find_or_create_by csr_id: data[:csr_id]
       agent.update_attributes({
         csr_type: data[:csr_type],
         name: data[:csr_name],

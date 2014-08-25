@@ -9,14 +9,14 @@ module Telephony
     has_many :events, class_name: 'Events::Base'
     belongs_to :agent
 
-    attr_accessible :sid,
-      :number,
-      :state,
-      :participant_id,
-      :participant_type,
-      :connected_at,
-      :terminated_at,
-      :agent
+    # attr_accessible :sid,
+    #   :number,
+    #   :state,
+    #   :participant_id,
+    #   :participant_type,
+    #   :connected_at,
+    #   :terminated_at,
+    #   :agent
 
     after_save do
       next unless agent_id

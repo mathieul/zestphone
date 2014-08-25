@@ -3,11 +3,11 @@ module Telephony
     class Base < ::Telephony::Base
       self.table_name = 'telephony_conversation_events'
 
-      attr_accessible :conversation_id,
-        :conversation_state,
-        :call_id,
-        :call_state,
-        :message_data
+      # attr_accessible :conversation_id,
+      #   :conversation_state,
+      #   :call_id,
+      #   :call_state,
+      #   :message_data
 
       serialize :message_data, Array
 

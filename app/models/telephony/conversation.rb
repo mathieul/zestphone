@@ -12,13 +12,13 @@ module Telephony
     belongs_to :transferee, class_name: 'Agent'
     has_many :events, class_name: 'Events::Base'
 
-    attr_accessible :state,
-      :loan_id,
-      :initiator_id,
-      :caller_id,
-      :number,
-      :conversation_type,
-      :transferee
+    # attr_accessible :state,
+    #   :loan_id,
+    #   :initiator_id,
+    #   :caller_id,
+    #   :number,
+    #   :conversation_type,
+    #   :transferee
 
     after_save do
       next unless state_was == 'enqueued' || enqueued?

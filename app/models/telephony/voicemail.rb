@@ -1,6 +1,6 @@
 module Telephony
   class Voicemail < Playable
-    attr_accessible :csr_id
+    # attr_accessible :csr_id
 
     validates :csr_id, presence: true
 

@@ -1,6 +1,6 @@
 module Telephony
   class PlayableListener < Base
-    attr_accessible :playable_id, :csr_id
+    # attr_accessible :playable_id, :csr_id
     validates :playable_id, presence: true
     validates :csr_id, presence: true
 

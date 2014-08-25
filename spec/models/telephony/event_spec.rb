@@ -76,9 +76,9 @@ module Telephony
 
           context 'with publishable events for agent2' do
             before do
-              class Base
-                attr_accessible :type
-              end
+              # class Base
+              #   attr_accessible :type
+              # end
 
               class Dummy < Base
                 def publishable?
