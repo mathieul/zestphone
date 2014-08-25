@@ -25,6 +25,7 @@ group :test do
   gem 'database_cleaner'
   gem 'wopr', git: "git://github.com/ZestFinance/wopr.git", tag: '0.2.0'
   gem 'rspec-rails'
+  gem 'rspec-collection_matchers'
   gem 'vcr'
   gem 'webmock'
   gem 'factory_girl_rails'

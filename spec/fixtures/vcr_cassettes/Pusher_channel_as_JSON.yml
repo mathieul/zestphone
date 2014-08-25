@@ -5,12 +5,12 @@ http_interactions:
     uri: http://api.pusherapp.com/apps/xxx/events?auth_key=xxx&auth_signature=ae408fb17a4bf672a2f2b6ad8271142ec46b915d9951643861963c3795246847&auth_timestamp=1360880252&auth_version=1.0&body_md5=0be55a65827d0d2684e0d65e149d1276
     body:
       encoding: US-ASCII
-      string: ! '{"name":"InitializeWidget","channels":["csrs-0"],"data":"{}"}'
+      string: '{"name":"InitializeWidget","channels":["csrs-0"],"data":"{}"}'
     headers:
       Content-Type:
       - application/json
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -26,20 +26,20 @@ http_interactions:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{}'
-    http_version:
+      string: "{}"
+    http_version: 
   recorded_at: Thu, 14 Feb 2013 22:17:32 GMT
 - request:
     method: post
     uri: http://api.pusherapp.com/apps/xxx/events?auth_key=xxx&auth_signature=e20e72419e69fa7a1c20ffb33aea10499aebb125219dc955f26325abb6b4c9c9&auth_timestamp=1360880252&auth_version=1.0&body_md5=2dfb16ebf87e71b3d1253bcd7ecc2e74
     body:
       encoding: US-ASCII
-      string: ! '{"name":"statusChange","channels":["csrs-0"],"data":"{\"status\":\"available\",\"timestamp\":1360880252609}"}'
+      string: '{"name":"statusChange","channels":["csrs-0"],"data":"{\"status\":\"available\",\"timestamp\":1360880252609}"}'
     headers:
       Content-Type:
       - application/json
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -55,20 +55,20 @@ http_interactions:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{}'
-    http_version:
+      string: "{}"
+    http_version: 
   recorded_at: Thu, 14 Feb 2013 22:17:32 GMT
 - request:
     method: post
     uri: http://api.pusherapp.com/apps/xxx/events?auth_key=xxx&auth_signature=30571e765d1b167d1ee81621a2ad1298ff3d6373b439b4d006b368b1a13595ee&auth_timestamp=1365025794&auth_version=1.0&body_md5=29c25e917cd86611b7eccf6819fd6e20
     body:
       encoding: US-ASCII
-      string: ! '{"name":"statusChange","channels":["csrs-0"],"data":"{\"status\":\"available\",\"timestamp\":1365025794926}"}'
+      string: '{"name":"statusChange","channels":["csrs-0"],"data":"{\"status\":\"available\",\"timestamp\":1365025794926}"}'
     headers:
       Content-Type:
       - application/json
       Accept:
-      - ! '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -84,7 +84,106 @@ http_interactions:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{}'
-    http_version:
+      string: "{}"
+    http_version: 
   recorded_at: Wed, 03 Apr 2013 21:49:55 GMT
-recorded_with: VCR 2.0.0
+- request:
+    method: post
+    uri: http://api.pusherapp.com/apps/86841/events?auth_key=33fad0ed456d61e85f2a&auth_signature=cb1a69987219454cd4b65626f0fe955df1da2964fff883bc1767dc710e5cb431&auth_timestamp=1409009732&auth_version=1.0&body_md5=3c50465ad338f09b21f8680413432fef
+    body:
+      encoding: UTF-8
+      string: '{"name":"statusChange","channels":["csrs-64"],"data":"{\"status\":\"available\",\"timestamp\":1409009732405}"}'
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.4.0, ruby 2.1.1 (2014-02-24))
+      Accept:
+      - "*/*"
+      Date:
+      - Mon, 25 Aug 2014 23:35:32 GMT
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Server:
+      - thin 1.6.1 codename Death Proof
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Mon, 25 Aug 2014 23:35:32 GMT
+- request:
+    method: post
+    uri: http://api.pusherapp.com/apps/86841/events?auth_key=33fad0ed456d61e85f2a&auth_signature=c697d5936d5c4dc0b133c1a614beac57be77f546eb52546cd1e1161da57e3306&auth_timestamp=1409009732&auth_version=1.0&body_md5=c52095614b165d9575e0096d5383b0ba
+    body:
+      encoding: UTF-8
+      string: '{"name":"statusChange","channels":["csrs-66"],"data":"{\"status\":\"not_available\",\"timestamp\":1409009732769}"}'
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.4.0, ruby 2.1.1 (2014-02-24))
+      Accept:
+      - "*/*"
+      Date:
+      - Mon, 25 Aug 2014 23:35:32 GMT
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Server:
+      - thin 1.6.1 codename Death Proof
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Mon, 25 Aug 2014 23:35:33 GMT
+- request:
+    method: post
+    uri: http://api.pusherapp.com/apps/86841/events?auth_key=33fad0ed456d61e85f2a&auth_signature=0a48005d72375c9150bdaf94be6d8c36fbd975194deaf926a6ba43992fb86390&auth_timestamp=1409009733&auth_version=1.0&body_md5=f3c7780dbb533787385afae928069f1f
+    body:
+      encoding: UTF-8
+      string: '{"name":"statusChange","channels":["csrs-67"],"data":"{\"status\":\"on_a_call\",\"timestamp\":1409009733064}"}'
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.4.0, ruby 2.1.1 (2014-02-24))
+      Accept:
+      - "*/*"
+      Date:
+      - Mon, 25 Aug 2014 23:35:33 GMT
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Server:
+      - thin 1.6.1 codename Death Proof
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Mon, 25 Aug 2014 23:35:33 GMT
+recorded_with: VCR 2.9.2

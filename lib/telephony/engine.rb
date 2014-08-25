@@ -9,6 +9,7 @@ module Telephony
 
     config.generators do |generators|
       generators.test_framework :rspec, view_specs:  false
+      generators.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
   end
 end

@@ -140,7 +140,7 @@ module Telephony
           @existing_agent.reload
 
           @existing_agent.csr_type.should == "A"
-          @existing_agent.generate_caller_id.should be_true
+          @existing_agent.generate_caller_id.should == true
           @existing_agent.name.should == "csr_name"
           @existing_agent.phone_number.should == "555-555-1234"
           @existing_agent.phone_ext.should == "csr_phone_ext"
@@ -227,7 +227,7 @@ module Telephony
       end
 
       context "given a member_removed event"  do
-        let(:job) { mock(Telephony::Jobs::AgentOffline)}
+        let(:job) { double(Telephony::Jobs::AgentOffline)}
         let(:timestamp) { 1234 }
 
         before do
@@ -238,7 +238,7 @@ module Telephony
           before do
             Telephony::DELAYED_JOB.should_receive(:enqueue)
             Telephony::Jobs::AgentOffline.stub(:new)
-              .with(@agent.id, timestamp).and_return { job }
+              .with(@agent.id, timestamp).and_return(job)
           end
 
           it "defer the handling of an offline webhook" do

@@ -73,7 +73,7 @@ module Telephony
           conversation_id: conversation.id,
           conversation_state: conversation.state,
           call_id: call_id,
-          number: conversation.customer.number,
+          number: conversation.customer.try(:number),
           loan_id: conversation.loan_id,
           owner: true
         }
@@ -114,7 +114,7 @@ module Telephony
         {
           channel: "csrs-#{agent.csr_id}",
           name: self.class.name.demodulize,
-            data: default_data.merge(data || {})
+          data: default_data.merge(data || {})
         }
       end
     end
