@@ -87,7 +87,7 @@ module Telephony
 
     def self.find_with_lock agent_id
       transaction do
-        yield find agent_id, lock: true
+        yield lock(true).find agent_id
       end
     end
 

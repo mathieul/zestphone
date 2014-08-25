@@ -81,7 +81,7 @@ module Telephony
       agent = nil
 
       Agent.transaction do
-        agent = Agent.find_by_csr_id(csr_id, lock: true)
+        agent = Agent.lock(true).find_by(csr_id: csr_id)
 
         if agent.on_a_call?
           raise Telephony::Error::AgentOnACall.new

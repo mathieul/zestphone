@@ -11,7 +11,7 @@ module Telephony
 
       serialize :message_data, Array
 
-      belongs_to :conversation, include: { calls: :agent }
+      belongs_to :conversation, -> { includes(calls: :agent) }
 
       after_create do
         publish

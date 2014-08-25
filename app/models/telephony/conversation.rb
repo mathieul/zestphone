@@ -8,7 +8,7 @@ module Telephony
       INBOUND = 'inbound'
     end
 
-    has_many :calls, order: 'id'
+    has_many :calls, -> { order(:id) }
     belongs_to :transferee, class_name: 'Agent'
     has_many :events, class_name: 'Events::Base'
 
@@ -58,19 +58,19 @@ module Telephony
 
     def self.find_with_lock(id)
       transaction do
-        yield find(id, joins: {calls: :agent}, lock: true, readonly: false)
+        yield lock(true).joins(calls: :agent).readonly(false).find(id)
       end
     end
 
     def self.find_inbound_with_lock(id)
       transaction do
-        yield find(id, lock: true)
+        yield lock(true).find(id)
       end
     end
 
     def self.find_inbound_calls_with_lock(id)
       transaction do
-        yield find(id, joins: :calls, lock: true)
+        yield lock(true).joins(:calls).find(id)
       end
     end
 
