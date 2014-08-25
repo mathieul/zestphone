@@ -288,7 +288,6 @@ PLATFORMS
 
 DEPENDENCIES
   american_date
-  awesome_print
   capybara
   cucumber
   cucumber-rails

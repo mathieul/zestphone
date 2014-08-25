@@ -15,6 +15,12 @@ group :development do
 end
 
 group :development, :test do
+  gem 'jazz_hands'
+  gem 'ruby-graphviz'
+  gem 'thin'
+end
+
+group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'wopr', git: "git://github.com/ZestFinance/wopr.git", tag: '0.2.0'
@@ -22,19 +28,12 @@ group :development, :test do
   gem 'vcr'
   gem 'webmock'
   gem 'factory_girl_rails'
-  gem 'jazz_hands'
-  gem 'ruby-graphviz'
-  gem 'thin'
-  gem 'awesome_print'
-  gem 'faker'
-  gem 'rainbow'
-  gem 'jasmine-headless-webkit', git: 'https://github.com/johnbintz/jasmine-headless-webkit.git'
-  gem 'jasmine-rails'
-end
-
-group :test do
   gem 'nokogiri'
   gem 'timecop'
   gem 'cucumber'
   gem 'cucumber-rails', require: false
+  gem 'faker'
+  gem 'rainbow'
+  gem 'jasmine-headless-webkit', git: 'https://github.com/johnbintz/jasmine-headless-webkit.git'
+  gem 'jasmine-rails'
 end
