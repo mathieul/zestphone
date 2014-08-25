@@ -13,8 +13,6 @@ describe 'Creating a conversation' do
   let(:agent_call_sid1) { 'i, however, am the agent call sid' }
   let(:agent_call_sid2) { 'i, by contract, am the second agent call sid' }
 
-  let(:twilio_call)
-
   before do
     Telephony.provider.stub(:client).and_return(twilio_client)
 

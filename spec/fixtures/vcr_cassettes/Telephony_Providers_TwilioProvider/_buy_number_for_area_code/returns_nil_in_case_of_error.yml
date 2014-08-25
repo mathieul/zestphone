@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://fake_account_sid:fake_auth_token@api.twilio.com/2010-04-01/Accounts/fake_account_sid/IncomingPhoneNumbers.json
+    body:
+      encoding: US-ASCII
+      string: AreaCode=500&VoiceUrl&SmsApplicationSid
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/3.12.0 (ruby/x86_64-darwin13.0 2.1.1-p76)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Mon, 25 Aug 2014 04:28:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '112'
+      Connection:
+      - close
+      Www-Authenticate:
+      - Basic realm="Twilio API"
+      Etag:
+      - ''
+      Last-Modified:
+      - ''
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+    body:
+      encoding: UTF-8
+      string: '{"code":20003,"message":"Authenticate","more_info":"https:\/\/www.twilio.com\/docs\/errors\/20003","status":401}'
+    http_version: 
+  recorded_at: Mon, 25 Aug 2014 04:28:13 GMT
+recorded_with: VCR 2.9.2

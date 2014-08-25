@@ -476,4 +476,15 @@ module Telephony
       end
     end
   end
+
+  describe "after agent is saved" do
+    before do
+      @agent = create :offline_agent
+      @agent.should_receive(:publish_status_change)
+    end
+
+    it "asks the agent to publish its status change" do
+      @agent.available!
+    end
+  end
 end

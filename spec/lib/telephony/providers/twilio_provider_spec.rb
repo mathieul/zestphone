@@ -212,9 +212,8 @@ module Telephony
         end
       end
 
-      describe "#buy_number_for_area_code" do
+      describe "#buy_number_for_area_code", vcr: "buying number for an area code" do
         # NOTE do NOT change the cassette name or it will buy a new number from Twilio
-        use_vcr_cassette "buying number for an area code"
 
         before do
           @area_code = "500"
@@ -395,8 +394,7 @@ module Telephony
       end
 
 
-      describe "#caller_id_for" do
-        use_vcr_cassette "display a local caller id"
+      describe "#caller_id_for", vcr: "display a local caller id" do
 
         before do
           @area_code = '213'

@@ -281,6 +281,15 @@ module Telephony
           end
         end
       end
+
+      describe "an event is created" do
+        let(:event) { build(:event) }
+
+        it "asks its event to publish itself" do
+          event.should_receive(:publish)
+          event.save!
+        end
+      end
     end
 
     describe Connect do
