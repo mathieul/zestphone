@@ -49,6 +49,10 @@ module Telephony
     validates :sip_number,   presence: true, :if => :uses_sip?
     validates :phone_number, presence: true, :if => :uses_phone?
 
+    after_save do
+      publish_status_change unless offline?
+    end
+
     def self.sort_by_status agents
       agents.sort_by { |agent| STATUS_SORT_ORDER[agent.status] }
     end

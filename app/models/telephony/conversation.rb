@@ -20,6 +20,12 @@ module Telephony
       :conversation_type,
       :transferee
 
+    after_save do
+      next unless state_was == 'enqueued' || enqueued?
+
+      PusherEventPublisher.queue_change Conversation.queue_size, Events::Base.select(:id).last.id
+    end
+
     def self.begin!(args)
       agent = Agent.find_by_csr_id args[:from_id]
 

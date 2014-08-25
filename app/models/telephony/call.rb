@@ -18,6 +18,18 @@ module Telephony
       :terminated_at,
       :agent
 
+    after_save do
+      next unless agent_id
+
+      Agent.find_with_lock(agent_id) do |agent|
+        if terminated? && state_was != 'not_initiated' && state_was != 'terminated'
+          agent.call_ended
+        elsif connecting?
+          agent.on_a_call
+        end
+      end
+    end
+
     def number with_protocol = false
       if agent
         agent.number with_protocol

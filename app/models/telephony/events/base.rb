@@ -13,6 +13,10 @@ module Telephony
 
       belongs_to :conversation, include: { calls: :agent }
 
+      after_create do
+        publish
+      end
+
       def self.log(args)
         klass = "Telephony::Events::#{args[:name].to_s.camelcase}".constantize
         event = klass.new args[:data]

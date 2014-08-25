@@ -20,8 +20,4 @@ RSpec.configure do |config|
   config.extend VCR::RSpec::Macros
 
   config.include PusherSignatureHelper, :type => :controller
-
-  config.before do
-    ActiveRecord::Base.observers.disable :all
-  end
 end

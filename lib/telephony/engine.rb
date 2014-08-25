@@ -10,10 +10,5 @@ module Telephony
     config.generators do |generators|
       generators.test_framework :rspec, view_specs:  false
     end
-
-    config.active_record.observers = 'Telephony::CallObserver',
-      'Telephony::AgentObserver',
-      'Telephony::EventObserver',
-      'Telephony::ConversationObserver'
   end
 end
