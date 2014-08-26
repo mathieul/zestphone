@@ -58,7 +58,7 @@ module Telephony
 
     def self.find_with_lock(id)
       transaction do
-        yield lock(true).joins(calls: :agent).readonly(false).find(id)
+        yield lock(true).includes(calls: :agent).readonly(false).find(id)
       end
     end
 

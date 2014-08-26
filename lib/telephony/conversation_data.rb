@@ -1,7 +1,7 @@
 module Telephony
   class ConversationData
     def self.filter(params = {})
-      conversations = Conversation.scoped
+      conversations = Conversation.all
 
       if params[:state]
         conversations = conversations.where(state: params[:state])
@@ -31,7 +31,7 @@ module Telephony
     end
 
     def self.search(args = {})
-      conversations = Conversation.scoped
+      conversations = Conversation.all
         .includes(:events, calls: [:recordings, :voicemail])
         .order("telephony_conversations.created_at")
           .reverse_order

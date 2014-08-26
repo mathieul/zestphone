@@ -4,6 +4,7 @@ module Telephony
   describe AgentsController do
     before do
       @routes = Engine.routes
+      PusherEventPublisher.stub(:publish)
     end
 
     describe "#terminate_active_call" do

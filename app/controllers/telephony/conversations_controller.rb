@@ -45,7 +45,7 @@ module Telephony
     end
 
     def hold
-      lock_conversation(params['id'], 'Hold failed. Please try again in a few seconds.') do |conversation|
+      lock_conversation(params[:id], 'Hold failed. Please try again in a few seconds.') do |conversation|
         conversation.hold!
         render json: {}
       end

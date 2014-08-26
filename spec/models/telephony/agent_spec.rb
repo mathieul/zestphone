@@ -395,6 +395,7 @@ module Telephony
 
   describe '#publish_status_change' do
     before do
+      PusherEventPublisher.stub(:publish)
       @agent = create :available_agent
     end
 

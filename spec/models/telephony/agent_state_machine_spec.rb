@@ -2,6 +2,10 @@ require 'spec_helper'
 
 module Telephony
   describe AgentStateMachine do
+    before do
+      PusherEventPublisher.stub(:publish)
+    end
+
     describe '#status' do
       before do
         @agent = create :agent
@@ -93,6 +97,7 @@ module Telephony
 
   describe '#after_transition' do
     before do
+      PusherEventPublisher.stub(:publish)
       @subscriber = ActiveSupport::Notifications.subscribe("telephony.agent_status_change") do |*args|
         @event = ActiveSupport::Notifications::Event.new(*args)
       end
